@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import React from "react";
 import { FaArrowUpLong } from "react-icons/fa6";
 
@@ -8,14 +9,17 @@ function LandingPage() {
         {["We Create", "Eye-opening", "Presentations"].map((item, index) => (
           <div className="masker" key={index}>
             <div className="w-fit flex items-center overflow-hidden">
-              {
-                [index === 1 && (
-                  <div
+              {[
+                index === 1 && (
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: "7.7vw" }}
+                    transition={{ ease: [0.76, 0, 0.24, 1],duration:1.5 }}
                     key={`${index}-highlight`} // Added a key here
                     className="mr-[0.7vw] w-[7.7vw] rounded-md h-[4.51vw] bg-red-500"
-                  ></div>
-                )]
-              }
+                  ></motion.div>
+                ),
+              ]}
               <h1 className="uppercase leading-[5.8vw] tracking-tighter text-[6vw] font-medium">
                 {item}
               </h1>

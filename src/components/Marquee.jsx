@@ -2,7 +2,7 @@ import React from 'react';
 
 function Marquee() {
   return (
-    <div className="relative w-full h-[40vh] bg-[#004D43] gap-[5vw] overflow-hidden flex items-center py-20 rounded-tl-3xl rounded-tr-3xl">
+    <div className="relative w-full h-[40vh] bg-[#004D43] overflow-hidden flex items-center py-20 rounded-tl-3xl rounded-tr-3xl">
       
       {/* Top line */}
       <div className="absolute top-10 transform -translate-y-1/2 w-full h-[2px] bg-gray-300"></div>
